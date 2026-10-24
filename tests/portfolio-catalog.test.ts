@@ -9,8 +9,10 @@ describe("portfolio catalog", () => {
 
   it("keeps Skills to a few bands, not a laundry list", () => {
     const { skills } = getResume();
+    expect(skills.length).toBeGreaterThan(0);
     expect(skills.length).toBeLessThanOrEqual(6);
     expect(skills.flatMap((group) => group.items).length).toBeLessThanOrEqual(24);
+    for (const group of skills) expect(group.items.length).toBeGreaterThan(0);
   });
 
   it("lists degrees only under Education", () => {
