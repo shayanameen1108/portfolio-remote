@@ -1,0 +1,9 @@
+{
+  "baselineSha": "3385d63050ceb0ca8dab05e94b0af64950a5d56c",
+  "artifact": "public/resume/download.pdf",
+  "method": "Independent read of committed bytes: the declared startxref value was compared against the actual byte offset of the xref section in the committed file. PDF xref entries are byte offsets per the Adobe PDF reference (section 3.4).",
+  "declaredStartXref": 23289,
+  "actualXrefOffset": 23277,
+  "deltaBytes": -12,
+  "note": "scripts/resume-pdf.ts rewrites PDF metadata with different-length strings and the modified bytes are published; existing regex page-count and Linux byte-equality checks pass over this structurally invalid output. Strict readers may reject or repair the file; this evidence does not claim every viewer fails."
+}

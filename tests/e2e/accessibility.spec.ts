@@ -1,9 +1,10 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
+import { caseStudies } from "@/catalog/portfolio";
 
 const screens = [
   "/",
-  "/work/ecobuiltconnect",
+  ...caseStudies.map((study) => `/work/${study.slug}`),
   "/resume",
   "/does-not-exist",
   "/work/does-not-exist",

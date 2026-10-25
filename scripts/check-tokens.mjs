@@ -2,19 +2,13 @@ import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 
 // Colours and sizes in the UI come from src/styles.css, on the 4px grid.
-// Email HTML and PDF fills live outside these paths: mail clients and pdf-lib
-// cannot read the theme.
-const skip = new Set([
-  "src/components/google-icon.tsx", // Google's own logo colours
-]);
 
 const files = execFileSync("git", ["ls-files", "src/routes", "src/components"], {
   encoding: "utf8",
 })
   .split("\n")
   .filter((file) => /\.(ts|tsx)$/.test(file))
-  .filter((file) => !file.startsWith("src/components/ui/"))
-  .filter((file) => !skip.has(file));
+  .filter((file) => !file.startsWith("src/components/ui/"));
 
 const rules = [
   { name: "an oklch() colour", pattern: /oklch\(/ },
