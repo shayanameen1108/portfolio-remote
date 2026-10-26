@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "source": {
+    "name": "portfolio-remote",
+    "account_id": "ab816378ce175deba8768e44d4c9478b",
+    "workers_dev": false,
+    "preview_urls": false,
+    "observability": {
+      "enabled": true
+    },
+    "routes": [
+      {
+        "pattern": "shayanameen.work",
+        "custom_domain": true
+      },
+      {
+        "pattern": "www.shayanameen.work",
+        "custom_domain": true
+      }
+    ]
+  },
+  "resolved": {
+    "name": "portfolio-remote",
+    "observability": {
+      "enabled": true
+    },
+    "routes": [
+      {
+        "pattern": "shayanameen.work",
+        "custom_domain": true
+      },
+      {
+        "pattern": "www.shayanameen.work",
+        "custom_domain": true
+      }
+    ],
+    "account_id": "ab816378ce175deba8768e44d4c9478b",
+    "workers_dev": false,
+    "preview_urls": false
+  },
+  "text": "{\n  \"name\": \"portfolio-remote\",\n  \"observability\": {\n    \"enabled\": true\n  },\n  \"routes\": [\n    {\n      \"pattern\": \"shayanameen.work\",\n      \"custom_domain\": true\n    },\n    {\n      \"pattern\": \"www.shayanameen.work\",\n      \"custom_domain\": true\n    }\n  ],\n  \"account_id\": \"ab816378ce175deba8768e44d4c9478b\",\n  \"workers_dev\": false,\n  \"preview_urls\": false\n}\n"
+}

@@ -1,7 +1,7 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
+import { voidPlugin } from "void";
 import { defineConfig, lazyPlugins } from "vite-plus";
 
 export default defineConfig({
@@ -9,7 +9,12 @@ export default defineConfig({
     "*": "vp check --fix",
   },
   fmt: {
-    ignorePatterns: [".agents/**", "src/routeTree.gen.ts", "public/resume/download.pdf"],
+    ignorePatterns: [
+      ".agents/**",
+      "**/routeTree.gen.ts",
+      "public/resume/download.pdf",
+      "void.lock.json",
+    ],
   },
   lint: {
     plugins: ["typescript", "react", "unicorn", "oxc", "import", "vitest", "jsx-a11y"],
@@ -17,7 +22,7 @@ export default defineConfig({
     categories: {
       correctness: "error",
     },
-    ignorePatterns: [".agents/**", "src/routeTree.gen.ts"],
+    ignorePatterns: [".agents/**", "**/routeTree.gen.ts"],
     options: {
       typeAware: true,
       typeCheck: true,
@@ -32,11 +37,6 @@ export default defineConfig({
   server: { port: 3000 },
   preview: { port: 4173 },
   // Lazy, so `vp check`, `vp lint`, and `vp fmt` read this file without
-  // starting the plugins.
-  plugins: lazyPlugins(() => [
-    cloudflare({ viteEnvironment: { name: "ssr" } }),
-    tailwindcss(),
-    tanstackStart(),
-    viteReact(),
-  ]),
+  // starting the plugins. voidPlugin must come before the framework plugin.
+  plugins: lazyPlugins(() => [voidPlugin(), tailwindcss(), tanstackStart(), viteReact()]),
 });
