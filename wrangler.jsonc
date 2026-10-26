@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "observability": {
+    "enabled": true,
+  },
+  "routes": [
+    {
+      "pattern": "shayanameen.work",
+      "custom_domain": true,
+    },
+    {
+      "pattern": "www.shayanameen.work",
+      "custom_domain": true,
+    },
+  ],
+}
