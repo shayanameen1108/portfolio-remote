@@ -91,7 +91,7 @@ export const identity: Identity = {
   role: "Product Engineer",
   bio: "I build custom web products end to end, and I mean the whole thing: the design decisions, the web and mobile clients, the data model, the infrastructure underneath. Some of it is client work that starts as an empty repository or as a codebase with history. Some is my own, shipped and running with real users. What I gravitate to is the complicated middle: who may do what, who owes whom money, and what happens when something goes wrong.",
   contact: [
-    { kind: "email", label: "Email", href: "mailto:sfx.pers@gmail.com" },
+    { kind: "email", label: "Email", href: "mailto:mail@shayanameen.com" },
     {
       kind: "threads",
       label: "Threads",
@@ -132,9 +132,9 @@ const experience: Experience[] = [
     location: "Remote, Zagreb, Croatia",
     dates: "Jan 2025 to Jul 2026",
     bullets: [
-      "I build and ship features on long-running client products, across the interface, the API behind it, and the release.",
-      "I work inside client teams alongside their design and product people, on new builds and on codebases that arrive with history.",
-      "I review other engineers’ work and help set the conventions a new joiner picks up on the way in.",
+      "I built and shipped features on long-running client products, across the interface, the API behind it, and the release.",
+      "I worked inside client teams alongside their design and product people, on new builds and on codebases that arrive with history.",
+      "I reviewed other engineers’ work and helped set the conventions a new joiner picks up on the way in.",
     ],
   },
   {

@@ -1,0 +1,14 @@
+
+ RUN  v5.0.4 /Users/sfx/phase1-evidence/checkouts-final/portfolio-remote
+
+ ✓ tests/portfolio-catalog.test.ts (8 tests) 8ms
+ ✓ tests/resume-print-html.test.ts (3 tests) 5ms
+ ✓ tests/resume-pdf.test.ts (5 tests | 1 skipped) 329ms
+   ✓ Resume PDF (5)
+     ✓ produces a structurally valid xref table on a local print 324ms
+
+ Test Files  3 passed (3)
+      Tests  15 passed | 1 skipped (16)
+   Start at  22:13:34
+   Duration  927ms (import 40%, tests 34%, transform 25%, worker 1%)
+
