@@ -16,7 +16,7 @@ export type Identity = {
 export type Experience = {
   title: string;
   organization: string;
-  location: string;
+  location?: string;
   dates: string;
   bullets: string[];
 };
@@ -129,7 +129,6 @@ const experience: Experience[] = [
   {
     title: "Product Engineer",
     organization: "Ars Futura",
-    location: "Remote, Zagreb, Croatia",
     dates: "Jan 2025 to Jul 2026",
     bullets: [
       "I built and shipped features on long-running client products, across the interface, the API behind it, and the release.",
@@ -140,7 +139,6 @@ const experience: Experience[] = [
   {
     title: "Freelance Software Engineer",
     organization: "Upwork",
-    location: "Remote",
     dates: "Apr 2025 to Present",
     bullets: [
       "I took client products from the first scoping call through release, deciding what to build as often as building it.",
@@ -151,7 +149,6 @@ const experience: Experience[] = [
   {
     title: "Software Engineer",
     organization: "Jumppace Pvt Ltd",
-    location: "On-site, Karachi, Pakistan",
     dates: "Oct 2023 to Nov 2024",
     bullets: [
       "I shipped production web applications on React, Node.js, and MongoDB, working on both sides of the API.",
@@ -162,7 +159,6 @@ const experience: Experience[] = [
   {
     title: "React.js Developer",
     organization: "AZ Code Arena",
-    location: "Hybrid, Karachi, Pakistan",
     dates: "Apr 2022 to Sep 2023",
     bullets: [
       "I turned Figma designs into responsive React interfaces built from reusable components.",

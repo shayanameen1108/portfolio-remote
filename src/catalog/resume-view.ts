@@ -2,7 +2,7 @@ import { getResume, identity, positioning, profileHeading } from "@/catalog/port
 
 type ExperienceViewItem = {
   title: string;
-  /** Pre-formatted "organization / location" line, identical in both views. */
+  /** Pre-formatted "organization / location" line (organization alone when no location), identical in both views. */
   subtitle: string;
   dates: string;
   bullets: string[];
@@ -55,7 +55,7 @@ export function getResumeView(): ResumeView {
       heading: "Recent experience",
       items: resume.experience.map((item) => ({
         title: item.title,
-        subtitle: `${item.organization} / ${item.location}`,
+        subtitle: item.location ? `${item.organization} / ${item.location}` : item.organization,
         dates: item.dates,
         bullets: item.bullets,
       })),
