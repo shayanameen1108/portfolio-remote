@@ -203,7 +203,7 @@ const education: Education[] = [
   {
     degree: "BS Computer Science",
     institution: "NED University of Engineering & Technology",
-    dates: "2022 to 2026",
+    dates: "2022",
     location: "Karachi, Pakistan",
   },
 ];
